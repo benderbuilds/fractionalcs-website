@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractional CS Leadership | Jesse Bender</title>
+    <meta name="description" content="Expert Customer Success leadership for B2B SaaS companies in regulated industries. 135% NRR. 93% retention. Built CS from scratch at TelePharm.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a3a52;
+            --accent: #e67e50;
+            --text: #2c3e50;
+            --text-light: #546e7a;
+            --bg: #fafbfc;
+            --bg-alt: #ffffff;
+            --border: #e1e8ed;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--primary);
+        }
+        
+        /* Header/Nav */
+        header {
+            background: var(--bg-alt);
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .cta-button {
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        /* Sections */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .hero {
+            padding: 6rem 2rem;
+            text-align: left;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+        
+        .hero-metrics {
+            display: flex;
+            gap: 3rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .metric {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .metric-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+        }
+        
+        .metric-label {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        /* Content blocks */
+        .content-block {
+            background: var(--bg-alt);
+            border-radius: 12px;
+            padding: 3rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        
+        .timeline {
+            margin: 2rem 0;
+        }
+        
+        .timeline-item {
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .timeline-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content {
+            color: var(--text-light);
+        }
+        
+        .timeline-content ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .timeline-content li {
+            margin-bottom: 0.3rem;
+        }
+        
+        /* Checkmarks */
+        .checklist {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .checklist li {
+            padding: 0.6rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Case study */
+        .case-study {
+            background: linear-gradient(135deg, var(--primary) 0%, #2d5a7b 100%);
+            color: white;
+            border: none;
+        }
+        
+        .case-study h2,
+        .case-study h3 {
+            color: white;
+        }
+        
+        .case-stat {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .case-stat strong {
+            color: var(--accent);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Pricing */
+        .pricing-box {
+            background: var(--bg-alt);
+            border: 2px solid var(--accent);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .price-details {
+            color: var(--text-light);
+            margin: 1rem 0 2rem 0;
+        }
+        
+        .comparison {
+            text-align: left;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+            margin: 4rem 0 0 0;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section .cta-button {
+            font-size: 1.1rem;
+            padding: 1rem 2.5rem;
+        }
+        
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info a {
+            color: var(--accent);
+            margin: 0 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--bg-alt);
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-light);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+            
+            section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .content-block {
+                padding: 2rem 1.5rem;
+            }
+            
+            .hero-metrics {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .metric {
+                min-width: 100%;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero, .content-block, .case-study {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .content-block:nth-child(2) { animation-delay: 0.1s; }
+        .content-block:nth-child(3) { animation-delay: 0.2s; }
+        .content-block:nth-child(4) { animation-delay: 0.3s; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FractionalCS</div>
+            <a href="mailto:jesseinic@gmail.com" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Fractional CS Leadership for<br>B2B SaaS in Regulated Industries</h1>
+        <p class="hero-subtitle">
+            Your customers are churning and you don't know why. You're selling into complex, regulated markets—healthcare, agriculture, financial services. You need a real Customer Success function, but hiring a full-time CS Director at $150K+ isn't in the budget.
+        </p>
+        <p class="hero-subtitle">
+            Get Director-level CS expertise starting this month instead of waiting 6 months to hire.
+        </p>
+        
+        <div class="hero-metrics">
+            <div class="metric">
+                <span class="metric-number">135%</span>
+                <span class="metric-label">Net Revenue Retention</span>
+            </div>
+            <div class="metric">
+                <span class="metric-number">93%</span>
+                <span class="metric-label">Customer Retention</span>
+            </div>
+            <div class="metric">
+                <span class="metric-number">$24K→$8M</span>
+                <span class="metric-label">ARR Growth at TelePharm</span>
+            </div>
+        </div>
+        
+        <a href="#contact" class="cta-button" style="font-size: 1.1rem; padding: 1rem 2rem;">Schedule 15-Min Call</a>
+    </section>
+
+    <section>
+        <h2>What I Do</h2>
+        <p style="font-size: 1.2rem; color: var(--text-light); margin-bottom: 2rem;">
+            I help early-stage B2B SaaS companies (Seed to Series A) build Customer Success functions that drive retention, expansion, and customer advocacy in regulated industries where relationships and expertise matter.
+        </p>
+        
+        <div class="content-block">
+            <h3>My Background</h3>
+            
+            <div style="margin: 2rem 0;">
+                <strong style="color: var(--primary); font-size: 1.1rem;">Built CS from scratch at TelePharm</strong> <span style="color: var(--text-light);">(pharmacy software, employee #6)</span>
+                <ul style="margin-top: 0.8rem; color: var(--text-light); padding-left: 1.5rem;">
+                    <li>Scaled from 3 customers to 300+ while growing ARR from $24K to $8M</li>
+                    <li>Achieved <strong>135% Net Revenue Retention</strong> and <strong>93% customer retention</strong></li>
+                    <li>Maintained <strong>NPS of 64</strong> (vs. industry benchmark of 30-40)</li>
+                    <li>Expansion revenue drove 45% of annual company growth</li>
+                    <li>Built team of 11, achieving 100% staff retention through Cardinal Health acquisition</li>
+                </ul>
+            </div>
+            
+            <div style="margin: 2rem 0;">
+                <strong style="color: var(--primary); font-size: 1.1rem;">Led CS at MediRevv</strong> <span style="color: var(--text-light);">(health system revenue cycle software)</span>
+                <ul style="margin-top: 0.8rem; color: var(--text-light); padding-left: 1.5rem;">
+                    <li>Managed teams serving 100+ health system accounts</li>
+                    <li>Navigated complex enterprise stakeholder environments</li>
+                </ul>
+            </div>
+            
+            <div style="margin: 2rem 0;">
+                <strong style="color: var(--primary); font-size: 1.1rem;">Most recently: Turned around CS operations at Rantizo</strong> <span style="color: var(--text-light);">(agricultural drone SaaS)</span>
+                <ul style="margin-top: 0.8rem; color: var(--text-light); padding-left: 1.5rem;">
+                    <li>Brought in to salvage $4.5M in at-risk revenue and fix negative reputation</li>
+                    <li>First 90 days: Documented all processes, implemented new CRM/ticketing/self-service systems</li>
+                    <li>Restructured 6-person team, developed renewal strategy</li>
+                </ul>
+            </div>
+            
+            <p style="color: var(--text-light); font-style: italic;">13+ years in regulated B2B SaaS: Healthcare tech, ag-tech, complex enterprise software</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>What You Get</h2>
+        <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem;">
+            Strategic CS Leadership: 10-15 hours/week
+        </p>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-title">Month 1: Assessment & Foundation</div>
+                <div class="timeline-content">
+                    <ul>
+                        <li>Complete customer health audit identifying at-risk accounts immediately</li>
+                        <li>Map your customer journey and pinpoint retention/expansion gaps</li>
+                        <li>Assess and recommend CS tech stack (CRM, customer health, support tools)</li>
+                        <li>Design customer feedback loops connecting CS insights to Product roadmap</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-title">Month 2: Build & Implement</div>
+                <div class="timeline-content">
+                    <ul>
+                        <li>Implement customer health scoring framework in your CRM</li>
+                        <li>Create customer onboarding documentation and workflows</li>
+                        <li>Build CS playbooks: QBR frameworks, renewal processes, escalation protocols</li>
+                        <li>Establish core CS workflows and success metrics</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-title">Month 3: Operationalize & Scale</div>
+                <div class="timeline-content">
+                    <ul>
+                        <li>Train your team on playbooks and best practices</li>
+                        <li>Set up dashboards and executive reporting</li>
+                        <li>Implement proactive customer outreach and risk mitigation processes</li>
+                        <li>Establish ongoing CS rhythm and accountability systems</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-title">Ongoing Strategic Partnership</div>
+                <div class="timeline-content">
+                    <ul>
+                        <li>Weekly touchpoints to address urgent CS challenges</li>
+                        <li>Advisory on CS hiring, compensation, and org design</li>
+                        <li>Product feedback prioritization from customer conversations</li>
+                        <li>Executive-level customer escalation support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-block case-study">
+        <h2>Recent Example: Rantizo (Agricultural Drone SaaS)</h2>
+        
+        <div class="case-stat">
+            <strong>The Situation</strong>
+            Brought in to turn around negative industry reputation, retain $4.5M in at-risk revenue, and transition reactive support to proactive CS operations.
+        </div>
+        
+        <div class="case-stat">
+            <strong>First 90 Days</strong>
+            <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                <li>Documented all customer-facing processes (shipping, feedback loops, compliance, warranty)</li>
+                <li>Implemented new inventory system, CRM, customer self-service portal, and ticketing platform</li>
+                <li>Restructured 6-person team with clear roles and responsibilities</li>
+                <li>Developed 2025 renewal strategy with OKR framework</li>
+            </ul>
+        </div>
+        
+        <div class="case-stat">
+            <strong>The Result</strong>
+            Created operational foundation for CS team to scale, systematic approach to renewals, and framework for measuring customer health across complex ag-tech customer base.
+        </div>
+    </section>
+
+    <section>
+        <h2>Who This Is For</h2>
+        <ul class="checklist">
+            <li>You've raised Seed or Series A funding</li>
+            <li>You're selling into regulated industries (healthcare, agriculture, finance, etc.)</li>
+            <li>You have 20-100 customers with complex implementation needs</li>
+            <li>You're seeing churn but don't understand why</li>
+            <li>Your founders or AEs are doing CS "on the side"</li>
+            <li>You can't afford a full-time CS leader yet</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Investment</h2>
+        <div class="pricing-box">
+            <div class="price">$5,000<span style="font-size: 1.5rem; color: var(--text);">/month</span></div>
+            <div class="price-details">
+                10-15 hours per week<br>
+                3-month minimum to build foundation and demonstrate impact
+            </div>
+            <a href="#contact" class="cta-button">Get Started</a>
+            
+            <div class="comparison">
+                <strong style="display: block; margin-bottom: 1rem; color: var(--primary);">Compare to full-time CS Director:</strong>
+                <ul style="color: var(--text-light);">
+                    <li><strong>Fractional:</strong> $5K/month ($60K/year)</li>
+                    <li><strong>Full-time:</strong> $150K+ salary + equity + benefits + 3-6 month search</li>
+                </ul>
+                <p style="margin-top: 1rem; color: var(--text-light); font-style: italic;">
+                    Get Director-level CS expertise this month instead of waiting 6 months to hire.
+                </p>
+            </div>
+        </div>
+        
+        <div class="content-block" style="margin-top: 3rem;">
+            <h3>Beyond the First 90 Days</h3>
+            <p style="margin: 1rem 0; color: var(--text-light);">
+                After building your CS foundation, most clients continue the engagement as your team scales and customer base grows. Ongoing support includes:
+            </p>
+            <ul style="margin: 1rem 0; color: var(--text-light); padding-left: 1.5rem;">
+                <li>Strategic CS planning and optimization</li>
+                <li>Executive escalation and customer fire-fighting</li>
+                <li>Metrics review and performance improvement</li>
+                <li>Hiring support when you're ready for a full-time CS leader</li>
+                <li>Continued system refinement as your business evolves</li>
+            </ul>
+            <p style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--text-light);">
+                <strong style="color: var(--primary);">Goal:</strong> My job is to make myself obsolete by building a CS function that either runs itself or is ready for a full-time leader. Most engagements run 6-12 months before that transition.
+            </p>
+        </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+        <h2>Ready to Build World-Class Customer Success?</h2>
+        <p style="font-size: 1.2rem; margin: 1.5rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Let's discuss your specific CS challenges in a 15-minute call.
+        </p>
+        <a href="mailto:jesseinic@gmail.com" class="cta-button">Email: jesseinic@gmail.com</a>
+        <div class="contact-info">
+            <a href="https://linkedin.com/in/jesseinic" target="_blank">LinkedIn</a>
+            <span style="color: rgba(255,255,255,0.5);">•</span>
+            <span>319-430-5090</span>
+        </div>
+        
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+            <p style="font-size: 1.3rem; font-family: 'Cormorant Garamond', serif; font-weight: 600;">Jesse Bender</p>
+            <p style="font-size: 0.95rem; color: rgba(255,255,255,0.8);">
+                Fractional CS Leader | B2B SaaS in Regulated Industries<br>
+                13+ Years Building Customer Success in Complex Markets
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FractionalCS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
