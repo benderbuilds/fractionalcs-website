@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fractional CS Leadership | Jesse Bender</title>
-    <meta name="description" content="Expert Customer Success leadership for B2B SaaS companies in regulated industries. 135% NRR. 93% retention. Built CS from scratch at TelePharm.">
+    <title>Stop Churn, Drive Expansion, Create Customer Evangelists | FractionalCS</title>
+    <meta name="description" content="Transform your Customer Success function with proven frameworks. Fractional CS leadership for B2B SaaS companies in regulated industries.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -343,6 +343,134 @@
             .metric {
                 min-width: 100%;
             }
+            
+            /* About section mobile fix */
+            section > div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background: var(--bg-alt);
+            border-radius: 12px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border: 1px solid var(--border);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(230, 126, 80, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 100%;
+        }
+        
+        .submit-button:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        /* Cost of Inaction Box */
+        .cost-box {
+            background: #fff5f5;
+            border-left: 4px solid #e67e50;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .cost-box h4 {
+            color: #c53030;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .cost-box ul {
+            color: var(--text);
+            padding-left: 1.5rem;
+        }
+        
+        .cost-box li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Stat Highlight */
+        .stat-highlight {
+            background: linear-gradient(135deg, rgba(230, 126, 80, 0.1) 0%, rgba(26, 58, 82, 0.05) 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin: 2rem 0;
+        }
+        
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
         }
         
         /* Animations */
@@ -375,229 +503,171 @@
     </header>
 
     <section class="hero">
-        <h1>Fractional CS Leadership for<br>B2B SaaS in Regulated Industries</h1>
+        <h1>Stop Churn, Drive Expansion, and<br>Create Customer Evangelists</h1>
         <p class="hero-subtitle">
-            Your customers are churning and you don't know why. You're selling into complex, regulated markets—healthcare, agriculture, financial services. You need a real Customer Success function, but hiring a full-time CS Director at $150K+ isn't in the budget.
-        </p>
-        <p class="hero-subtitle">
-            Get Director-level CS expertise starting this month instead of waiting 6 months to hire.
+            FractionalCS transforms your Customer Success function with proven frameworks to proactively onboard, engage, and support your customers at scale.
         </p>
         
-        <div class="hero-metrics">
-            <div class="metric">
-                <span class="metric-number">135%</span>
-                <span class="metric-label">Net Revenue Retention</span>
-            </div>
-            <div class="metric">
-                <span class="metric-number">93%</span>
-                <span class="metric-label">Customer Retention</span>
-            </div>
-            <div class="metric">
-                <span class="metric-number">$24K→$8M</span>
-                <span class="metric-label">ARR Growth at TelePharm</span>
-            </div>
-        </div>
-        
-        <a href="#contact" class="cta-button" style="font-size: 1.1rem; padding: 1rem 2rem;">Schedule 15-Min Call</a>
+        <a href="https://calendly.com/jesseinic/30min" target="_blank" class="cta-button" style="font-size: 1.1rem; padding: 1rem 2rem;">Schedule a Consultation</a>
     </section>
 
     <section>
-        <h2>What I Do</h2>
-        <p style="font-size: 1.2rem; color: var(--text-light); margin-bottom: 2rem;">
-            I help early-stage B2B SaaS companies (Seed to Series A) build Customer Success functions that drive retention, expansion, and customer advocacy in regulated industries where relationships and expertise matter.
+        <h2 style="text-align: center;">Comprehensive CS Solutions for B2B SaaS</h2>
+        <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 3rem; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">
+            We provide end to end Customer Success leadership tailored to your stage, industry, and challenges, particularly for companies serving regulated markets like healthcare and financial services.
         </p>
         
-        <div class="content-block">
-            <h3>My Background</h3>
-            
-            <div style="margin: 2rem 0;">
-                <strong style="color: var(--primary); font-size: 1.1rem;">Built CS from scratch at TelePharm</strong> <span style="color: var(--text-light);">(pharmacy software, employee #6)</span>
-                <ul style="margin-top: 0.8rem; color: var(--text-light); padding-left: 1.5rem;">
-                    <li>Scaled from 3 customers to 300+ while growing ARR from $24K to $8M</li>
-                    <li>Achieved <strong>135% Net Revenue Retention</strong> and <strong>93% customer retention</strong></li>
-                    <li>Maintained <strong>NPS of 64</strong> (vs. industry benchmark of 30-40)</li>
-                    <li>Expansion revenue drove 45% of annual company growth</li>
-                    <li>Built team of 11, achieving 100% staff retention through Cardinal Health acquisition</li>
-                </ul>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 3rem 0;">
+            <div class="content-block" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;">📊</div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 0.8rem;">Customer Health</h3>
+                <p style="color: var(--text-light); font-size: 0.95rem;">Build early warning systems to identify at risk accounts before they churn</p>
             </div>
             
-            <div style="margin: 2rem 0;">
-                <strong style="color: var(--primary); font-size: 1.1rem;">Led CS at MediRevv</strong> <span style="color: var(--text-light);">(health system revenue cycle software)</span>
-                <ul style="margin-top: 0.8rem; color: var(--text-light); padding-left: 1.5rem;">
-                    <li>Managed teams serving 100+ health system accounts</li>
-                    <li>Navigated complex enterprise stakeholder environments</li>
-                </ul>
+            <div class="content-block" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;">🎯</div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 0.8rem;">Journey Optimization</h3>
+                <p style="color: var(--text-light); font-size: 0.95rem;">Map and streamline your customer journey from onboarding to renewal</p>
             </div>
             
-            <div style="margin: 2rem 0;">
-                <strong style="color: var(--primary); font-size: 1.1rem;">Most recently: Turned around CS operations at Rantizo</strong> <span style="color: var(--text-light);">(agricultural drone SaaS)</span>
-                <ul style="margin-top: 0.8rem; color: var(--text-light); padding-left: 1.5rem;">
-                    <li>Brought in to salvage $4.5M in at-risk revenue and fix negative reputation</li>
-                    <li>First 90 days: Documented all processes, implemented new CRM/ticketing/self-service systems</li>
-                    <li>Restructured 6-person team, developed renewal strategy</li>
-                </ul>
+            <div class="content-block" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;">📈</div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 0.8rem;">Expansion Strategy</h3>
+                <p style="color: var(--text-light); font-size: 0.95rem;">Systematic frameworks for upsell, cross sell, and customer advocacy</p>
             </div>
             
-            <p style="color: var(--text-light); font-style: italic;">13+ years in regulated B2B SaaS: Healthcare tech, ag-tech, complex enterprise software</p>
+            <div class="content-block" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;">⚙️</div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 0.8rem;">Scalable Operations</h3>
+                <p style="color: var(--text-light); font-size: 0.95rem;">Build playbooks, processes, and tech stack to scale CS efficiently</p>
+            </div>
+            
+            <div class="content-block" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;">👥</div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 0.8rem;">Team Development</h3>
+                <p style="color: var(--text-light); font-size: 0.95rem;">Train and enable your team on CS best practices and frameworks</p>
+            </div>
+            
+            <div class="content-block" style="text-align: center; padding: 2rem;">
+                <div style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;">🔄</div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 0.8rem;">Product Feedback Loops</h3>
+                <p style="color: var(--text-light); font-size: 0.95rem;">Connect customer insights directly to your product roadmap</p>
+            </div>
         </div>
     </section>
 
-    <section>
-        <h2>What You Get</h2>
-        <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem;">
-            Strategic CS Leadership: 10-15 hours/week
-        </p>
-        
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-title">Month 1: Assessment & Foundation</div>
-                <div class="timeline-content">
-                    <ul>
-                        <li>Complete customer health audit identifying at-risk accounts immediately</li>
-                        <li>Map your customer journey and pinpoint retention/expansion gaps</li>
-                        <li>Assess and recommend CS tech stack (CRM, customer health, support tools)</li>
-                        <li>Design customer feedback loops connecting CS insights to Product roadmap</li>
-                    </ul>
-                </div>
-            </div>
+    <section style="background: var(--bg-alt); padding: 5rem 2rem; margin: 4rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 1rem;">How We Transform Your CS Function</h2>
+            <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 4rem; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Our proven approach ensures you achieve measurable results in the short term, with ongoing support to scale your CS operations.
+            </p>
             
-            <div class="timeline-item">
-                <div class="timeline-title">Month 2: Build & Implement</div>
-                <div class="timeline-content">
-                    <ul>
-                        <li>Implement customer health scoring framework in your CRM</li>
-                        <li>Create customer onboarding documentation and workflows</li>
-                        <li>Build CS playbooks: QBR frameworks, renewal processes, escalation protocols</li>
-                        <li>Establish core CS workflows and success metrics</li>
-                    </ul>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
+                <div>
+                    <div style="font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem; line-height: 1;">1</div>
+                    <h3 style="margin-bottom: 1rem;">Assessment & Strategy</h3>
+                    <p style="color: var(--text-light);">
+                        Comprehensive audit of your current CS operations, customer health, and journey. Identify gaps and prioritize quick wins alongside strategic initiatives.
+                    </p>
                 </div>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-title">Month 3: Operationalize & Scale</div>
-                <div class="timeline-content">
-                    <ul>
-                        <li>Train your team on playbooks and best practices</li>
-                        <li>Set up dashboards and executive reporting</li>
-                        <li>Implement proactive customer outreach and risk mitigation processes</li>
-                        <li>Establish ongoing CS rhythm and accountability systems</li>
-                    </ul>
+                
+                <div>
+                    <div style="font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem; line-height: 1;">2</div>
+                    <h3 style="margin-bottom: 1rem;">Framework Implementation</h3>
+                    <p style="color: var(--text-light);">
+                        Build and implement customer health scoring, playbooks for onboarding/renewals/expansion, and establish feedback loops to Product.
+                    </p>
                 </div>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-title">Ongoing Strategic Partnership</div>
-                <div class="timeline-content">
-                    <ul>
-                        <li>Weekly touchpoints to address urgent CS challenges</li>
-                        <li>Advisory on CS hiring, compensation, and org design</li>
-                        <li>Product feedback prioritization from customer conversations</li>
-                        <li>Executive-level customer escalation support</li>
-                    </ul>
+                
+                <div>
+                    <div style="font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem; line-height: 1;">3</div>
+                    <h3 style="margin-bottom: 1rem;">Team Enablement</h3>
+                    <p style="color: var(--text-light);">
+                        Train your team on frameworks, establish metrics and reporting, and create scalable processes that work without your constant oversight.
+                    </p>
+                </div>
+                
+                <div>
+                    <div style="font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem; line-height: 1;">4</div>
+                    <h3 style="margin-bottom: 1rem;">Ongoing Partnership</h3>
+                    <p style="color: var(--text-light);">
+                        Continuous optimization, strategic guidance, and support as you scale up.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="content-block case-study">
-        <h2>Recent Example: Rantizo (Agricultural Drone SaaS)</h2>
+        <h2 style="text-align: center; margin-bottom: 3rem;">A Client Success Story</h2>
         
-        <div class="case-stat">
-            <strong>The Situation</strong>
-            Brought in to turn around negative industry reputation, retain $4.5M in at-risk revenue, and transition reactive support to proactive CS operations.
+        <div style="max-width: 900px; margin: 0 auto;">
+            <p style="font-size: 1.3rem; font-style: italic; line-height: 1.7; margin-bottom: 2rem;">
+                "As an early stage healthcare SaaS company, we were completely reactive with customer success. Jesse built our entire CS function from scratch: customer health scoring, onboarding playbooks, renewal processes, everything. We went from firefighting to proactively managing our accounts. We saw 135% Net Revenue Retention with 45% of revenue coming from customer expansion activities. These were key drivers of our successful acquisition by Cardinal Health."
+            </p>
+            <p style="text-align: center; font-weight: 600; color: var(--accent);">Roby Miller - Founder, TelePharm</p>
         </div>
         
-        <div class="case-stat">
-            <strong>First 90 Days</strong>
-            <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
-                <li>Documented all customer-facing processes (shipping, feedback loops, compliance, warranty)</li>
-                <li>Implemented new inventory system, CRM, customer self-service portal, and ticketing platform</li>
-                <li>Restructured 6-person team with clear roles and responsibilities</li>
-                <li>Developed 2025 renewal strategy with OKR framework</li>
-            </ul>
-        </div>
-        
-        <div class="case-stat">
-            <strong>The Result</strong>
-            Created operational foundation for CS team to scale, systematic approach to renewals, and framework for measuring customer health across complex ag-tech customer base.
-        </div>
-    </section>
-
-    <section>
-        <h2>Who This Is For</h2>
-        <ul class="checklist">
-            <li>You've raised Seed or Series A funding</li>
-            <li>You're selling into regulated industries (healthcare, agriculture, finance, etc.)</li>
-            <li>You have 20-100 customers with complex implementation needs</li>
-            <li>You're seeing churn but don't understand why</li>
-            <li>Your founders or AEs are doing CS "on the side"</li>
-            <li>You can't afford a full-time CS leader yet</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Investment</h2>
-        <div class="pricing-box">
-            <div class="price">$5,000<span style="font-size: 1.5rem; color: var(--text);">/month</span></div>
-            <div class="price-details">
-                10-15 hours per week<br>
-                3-month minimum to build foundation and demonstrate impact
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-top: 4rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+            <div style="text-align: center;">
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">135%</div>
+                <div style="color: rgba(255,255,255,0.9);">Net Revenue Retention</div>
             </div>
-            <a href="#contact" class="cta-button">Get Started</a>
+            <div style="text-align: center;">
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">93%</div>
+                <div style="color: rgba(255,255,255,0.9);">Customer Retention</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">$24K→$30M</div>
+                <div style="color: rgba(255,255,255,0.9);">ARR Growth</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">45%</div>
+                <div style="color: rgba(255,255,255,0.9);">Revenue from Expansion</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 style="text-align: center;">Who We Work With</h2>
+        <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 3rem; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">
+            Fractional CS Leadership is ideal for early to mid stage B2B SaaS companies scaling quickly or more mature companies hitting revenue plateaus.
+        </p>
             
-            <div class="comparison">
-                <strong style="display: block; margin-bottom: 1rem; color: var(--primary);">Compare to full-time CS Director:</strong>
-                <ul style="color: var(--text-light);">
-                    <li><strong>Fractional:</strong> $5K/month ($60K/year)</li>
-                    <li><strong>Full-time:</strong> $150K+ salary + equity + benefits + 3-6 month search</li>
+            <div class="content-block">
+                <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Industry Focus</h3>
+                <ul style="color: var(--text-light); padding-left: 1.5rem;">
+                    <li>Healthcare technology (pharmacy, health systems, providers)</li>
+                    <li>Financial services and fintech</li>
+                    <li>Any B2B SaaS with complex customer needs</li>
                 </ul>
-                <p style="margin-top: 1rem; color: var(--text-light); font-style: italic;">
-                    Get Director-level CS expertise this month instead of waiting 6 months to hire.
-                </p>
             </div>
-        </div>
-        
-        <div class="content-block" style="margin-top: 3rem;">
-            <h3>Beyond the First 90 Days</h3>
-            <p style="margin: 1rem 0; color: var(--text-light);">
-                After building your CS foundation, most clients continue the engagement as your team scales and customer base grows. Ongoing support includes:
-            </p>
-            <ul style="margin: 1rem 0; color: var(--text-light); padding-left: 1.5rem;">
-                <li>Strategic CS planning and optimization</li>
-                <li>Executive escalation and customer fire-fighting</li>
-                <li>Metrics review and performance improvement</li>
-                <li>Hiring support when you're ready for a full-time CS leader</li>
-                <li>Continued system refinement as your business evolves</li>
-            </ul>
-            <p style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--text-light);">
-                <strong style="color: var(--primary);">Goal:</strong> My job is to make myself obsolete by building a CS function that either runs itself or is ready for a full-time leader. Most engagements run 6-12 months before that transition.
-            </p>
+            
+            <div class="content-block">
+                <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Current Challenges</h3>
+                <ul style="color: var(--text-light); padding-left: 1.5rem;">
+                    <li>Churn without clear understanding of root causes</li>
+                    <li>Reactive, firefighting approach to CS</li>
+                    <li>Founders or AEs wearing the CS hat</li>
+                    <li>Missing expansion revenue opportunities</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <section class="cta-section" id="contact">
-        <h2>Ready to Build World-Class Customer Success?</h2>
-        <p style="font-size: 1.2rem; margin: 1.5rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
-            Let's discuss your specific CS challenges in a 15-minute call.
+        <h2>Ready to Transform Your Customer Success?</h2>
+        <p style="font-size: 1.2rem; margin: 1.5rem 0; max-width: 700px; margin-left: auto; margin-right: auto;">
+            Schedule a consultation to discuss your CS challenges and explore how fractional leadership can help you achieve your retention and expansion goals.
         </p>
-        <a href="mailto:jesseinic@gmail.com" class="cta-button">Email: jesseinic@gmail.com</a>
-        <div class="contact-info">
-            <a href="https://linkedin.com/in/jesseinic" target="_blank">LinkedIn</a>
-            <span style="color: rgba(255,255,255,0.5);">•</span>
-            <span>319-430-5090</span>
-        </div>
         
-        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
-            <p style="font-size: 1.3rem; font-family: 'Cormorant Garamond', serif; font-weight: 600;">Jesse Bender</p>
-            <p style="font-size: 0.95rem; color: rgba(255,255,255,0.8);">
-                Fractional CS Leader | B2B SaaS in Regulated Industries<br>
-                13+ Years Building Customer Success in Complex Markets
-            </p>
-        </div>
+        <a href="https://calendly.com/jesseinic/30min" target="_blank" class="cta-button" style="display: inline-block; margin: 2rem 0;">Schedule a Consultation</a>
     </section>
 
     <footer>
         <p>&copy; 2026 FractionalCS. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;"><a href="https://linkedin.com/in/jesseinic" target="_blank" style="color: var(--text-light);">LinkedIn</a></p>
     </footer>
 </body>
 </html>
