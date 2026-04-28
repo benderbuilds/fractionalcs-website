@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FractionalCS | Customer Success Leadership for Health Tech</title>
+    <meta name="description" content="Fractional Customer Success leadership for health tech executives. Thirteen years scaling healthcare SaaS, including TelePharm from $24K to $30M ARR at 135% Net Revenue Retention through acquisition by a Fortune 15 healthcare company.">
+    <meta property="og:title" content="FractionalCS | Customer Success Leadership for Health Tech">
+    <meta property="og:description" content="Fractional CS leadership for health tech executives. 135% NRR. 93% GRR. Built and scaled through acquisition.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fractionalcs.io">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Hanken+Grotesk:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #F7F4ED;
+            --bg-card: #FFFFFF;
+            --bg-deep: #0F1B2A;
+            --ink: #0F1B2A;
+            --ink-soft: #2C3E50;
+            --muted: #6B7785;
+            --accent: #E67E50;
+            --accent-deep: #D26A3D;
+            --line: #E5DDD0;
+            --line-soft: #EFE8DB;
+            --serif: 'Fraunces', Georgia, serif;
+            --sans: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: var(--ink);
+            color: var(--bg);
+        }
+
+        /* ====== Layout ====== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .container-narrow {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 7rem 0;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 4.5rem 0; }
+            .container, .container-narrow { padding: 0 1.5rem; }
+        }
+
+        /* ====== Typography ====== */
+        h1, h2, h3, h4 {
+            font-family: var(--serif);
+            font-weight: 400;
+            color: var(--ink);
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .eyebrow {
+            font-family: var(--sans);
+            font-size: 0.78rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .eyebrow-line {
+            position: relative;
+            padding-left: 3.5rem;
+        }
+
+        .eyebrow-line::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 2.5rem;
+            height: 1px;
+            background: var(--muted);
+        }
+
+        /* ====== Nav ====== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.25rem 0;
+            background: rgba(247, 244, 237, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        nav.scrolled {
+            border-bottom-color: var(--line);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wordmark {
+            font-family: var(--serif);
+            font-size: 1.4rem;
+            font-weight: 500;
+            font-style: italic;
+            color: var(--ink);
+            text-decoration: none;
+            letter-spacing: -0.015em;
+        }
+
+        .wordmark .dot {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--ink);
+            text-decoration: none;
+            padding: 0.55rem 1.4rem;
+            border: 1px solid var(--ink);
+            border-radius: 100px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--ink);
+            color: var(--bg);
+        }
+
+        /* ====== Hero ====== */
+        .hero {
+            padding-top: 9rem;
+            padding-bottom: 4rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 6rem;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(230, 126, 80, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 920px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.75rem);
+            font-weight: 350;
+            line-height: 1.05;
+            margin-bottom: 2rem;
+            letter-spacing: -0.025em;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            font-weight: 400;
+            color: var(--accent);
+        }
+
+        .hero-sub {
+            font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+            line-height: 1.55;
+            color: var(--ink-soft);
+            max-width: 680px;
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+
+        .proof-strip {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--line);
+            max-width: 760px;
+        }
+
+        .proof-strip .item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .proof-strip .num {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--ink);
+            letter-spacing: -0.02em;
+            line-height: 1;
+        }
+
+        .proof-strip .lbl {
+            font-size: 0.78rem;
+            color: var(--muted);
+            margin-top: 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* ====== Numbers Feature ====== */
+        .numbers {
+            background: var(--bg-deep);
+            color: var(--bg);
+        }
+
+        .numbers .eyebrow {
+            color: rgba(247, 244, 237, 0.6);
+        }
+
+        .numbers .eyebrow-line::before {
+            background: rgba(247, 244, 237, 0.4);
+        }
+
+        .numbers h2 {
+            color: var(--bg);
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-weight: 350;
+            margin-bottom: 4rem;
+            max-width: 760px;
+        }
+
+        .numbers h2 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border-top: 1px solid rgba(247, 244, 237, 0.15);
+            border-left: 1px solid rgba(247, 244, 237, 0.15);
+        }
+
+        .metric {
+            padding: 2.5rem 2rem;
+            border-right: 1px solid rgba(247, 244, 237, 0.15);
+            border-bottom: 1px solid rgba(247, 244, 237, 0.15);
+        }
+
+        .metric-num {
+            font-family: var(--serif);
+            font-size: clamp(2.5rem, 4.5vw, 3.6rem);
+            font-weight: 350;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.025em;
+            color: var(--bg);
+        }
+
+        .metric-num .accent {
+            color: var(--accent);
+        }
+
+        .metric-lbl {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(247, 244, 237, 0.7);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-context {
+            font-size: 0.9rem;
+            color: rgba(247, 244, 237, 0.55);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .metrics-grid { grid-template-columns: 1fr; }
+            .metric { padding: 2rem 1.5rem; }
+        }
+
+        /* ====== Section Headers ====== */
+        .section-head {
+            margin-bottom: 4.5rem;
+            max-width: 720px;
+        }
+
+        .section-head h2 {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 350;
+            margin-bottom: 1.25rem;
+        }
+
+        .section-head h2 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .section-head p {
+            font-size: 1.15rem;
+            color: var(--ink-soft);
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        /* ====== Use Cases ====== */
+        .use-cases {
+            background: var(--bg);
+        }
+
+        .case-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .case {
+            display: grid;
+            grid-template-columns: 80px 1fr 1fr;
+            gap: 3rem;
+            padding: 3rem 0;
+            border-top: 1px solid var(--line);
+            align-items: start;
+            transition: padding 0.3s ease;
+        }
+
+        .case:last-child {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .case-num {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--accent);
+            font-weight: 400;
+        }
+
+        .case-trigger {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.25;
+            color: var(--ink);
+            letter-spacing: -0.01em;
+        }
+
+        .case-response {
+            color: var(--ink-soft);
+            font-size: 1rem;
+            line-height: 1.65;
+        }
+
+        .case-response strong {
+            display: block;
+            color: var(--ink);
+            font-weight: 600;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.6rem;
+        }
+
+        @media (max-width: 880px) {
+            .case {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+                padding: 2.5rem 0;
+            }
+            .case-trigger { font-size: 1.25rem; }
+        }
+
+        /* ====== Track Record ====== */
+        .track-record {
+            background: var(--bg-card);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .tr-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+        }
+
+        @media (max-width: 880px) {
+            .tr-grid { grid-template-columns: 1fr; gap: 3rem; }
+        }
+
+        .tr-bio h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 350;
+            margin-bottom: 1.5rem;
+            line-height: 1.15;
+        }
+
+        .tr-portrait {
+            width: 160px;
+            height: 160px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 12px 32px rgba(15, 27, 42, 0.12);
+            border: 1px solid var(--line);
+        }
+
+        .tr-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .tr-byline {
+            font-family: var(--sans);
+            font-size: 0.85rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 1.25rem;
+            font-weight: 500;
+        }
+
+        .tr-bio h2 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .tr-bio p {
+            color: var(--ink-soft);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .tr-bio p:last-child {
+            margin-bottom: 0;
+        }
+
+        .tr-roles {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+
+        .role {
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--line);
+            position: relative;
+        }
+
+        .role::before {
+            content: "";
+            position: absolute;
+            left: -5px;
+            top: 0.5rem;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .role-title {
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.01em;
+        }
+
+        .role-co {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 0.65rem;
+            font-weight: 500;
+        }
+
+        .role-detail {
+            font-size: 0.95rem;
+            color: var(--ink-soft);
+            line-height: 1.6;
+        }
+
+        /* ====== Who I Work With ====== */
+        .ideal-client {
+            background: var(--bg);
+        }
+
+        .ic-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .ic-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+        }
+
+        .ic-col h3 {
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .ic-col h3 .yes {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .ic-col h3 .no {
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        .ic-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .ic-col li {
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--ink-soft);
+            padding-left: 1.75rem;
+            position: relative;
+        }
+
+        .ic-col li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.65rem;
+            width: 12px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .ic-col.no-col li::before {
+            background: var(--muted);
+            opacity: 0.5;
+        }
+
+        /* ====== Contact ====== */
+        .contact {
+            background: var(--bg-deep);
+            color: var(--bg);
+            padding: 7rem 0;
+        }
+
+        .contact .eyebrow {
+            color: rgba(247, 244, 237, 0.6);
+        }
+
+        .contact .eyebrow-line::before {
+            background: rgba(247, 244, 237, 0.4);
+        }
+
+        .contact h2 {
+            color: var(--bg);
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 350;
+            margin-bottom: 1.5rem;
+            line-height: 1.15;
+        }
+
+        .contact h2 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .contact-intro {
+            font-size: 1.1rem;
+            color: rgba(247, 244, 237, 0.75);
+            line-height: 1.6;
+            max-width: 560px;
+            margin-bottom: 3.5rem;
+        }
+
+        .contact-form {
+            background: var(--bg-card);
+            border: 2px solid var(--bg-deep);
+            border-radius: 12px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            color: var(--ink);
+        }
+
+        @media (max-width: 600px) {
+            .contact-form { padding: 2rem 1.5rem; }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: var(--sans);
+            font-weight: 600;
+            color: var(--ink);
+            font-size: 0.95rem;
+            margin-bottom: 0.6rem;
+            text-align: center;
+        }
+
+        .form-group label .req {
+            color: var(--accent);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border: 1px solid #D8D3CB;
+            border-radius: 6px;
+            font-family: var(--sans);
+            font-size: 1rem;
+            color: var(--ink);
+            background: var(--bg-card);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--bg-deep);
+            box-shadow: 0 0 0 3px rgba(15, 27, 42, 0.08);
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+            font-family: var(--sans);
+        }
+
+        .form-group textarea::placeholder {
+            color: #9CA3AF;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.05rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-family: var(--sans);
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.1s ease;
+            margin-top: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-deep);
+        }
+
+        .submit-btn:active {
+            transform: translateY(1px);
+        }
+
+        .form-status {
+            margin-top: 1.25rem;
+            text-align: center;
+            font-size: 0.95rem;
+            min-height: 1.4rem;
+            color: var(--ink-soft);
+        }
+
+        .form-status.success { color: #2D7A3E; font-weight: 500; }
+        .form-status.error { color: #B73E3E; font-weight: 500; }
+
+        /* ====== Footer ====== */
+        footer {
+            background: var(--bg-deep);
+            color: rgba(247, 244, 237, 0.6);
+            padding: 2.5rem 0;
+            border-top: 1px solid rgba(247, 244, 237, 0.1);
+            font-size: 0.85rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        footer .wordmark {
+            color: rgba(247, 244, 237, 0.85);
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: rgba(247, 244, 237, 0.6);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+        }
+
+        /* ====== Reveal Animation ====== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero entrance */
+        .hero h1, .hero-sub, .proof-strip {
+            opacity: 0;
+            animation: fadeUp 0.9s ease forwards;
+        }
+
+        .hero h1 { animation-delay: 0.1s; }
+        .hero-sub { animation-delay: 0.3s; }
+        .proof-strip { animation-delay: 0.5s; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<nav id="nav">
+    <div class="container">
+        <div class="nav-inner">
+            <a href="#" class="wordmark">FractionalCS<span class="dot">.</span></a>
+            <a href="#contact" class="nav-cta">Get in touch</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<header class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <span class="eyebrow eyebrow-line">Fractional Customer Success Leadership</span>
+            <h1>Customer Success leadership for health tech founders in <em>growth mode</em>.</h1>
+            <p class="hero-sub">A fractional partnership built on thirteen years of healthcare SaaS experience, including scaling TelePharm's Customer Success function through acquisition by a Fortune 15 healthcare company.</p>
+
+            <div class="proof-strip">
+                <div class="item">
+                    <span class="num">$24K → $30M</span>
+                    <span class="lbl">ARR Scaled</span>
+                </div>
+                <div class="item">
+                    <span class="num">135%</span>
+                    <span class="lbl">Net Revenue Retention</span>
+                </div>
+                <div class="item">
+                    <span class="num">93%</span>
+                    <span class="lbl">Gross Revenue Retention</span>
+                </div>
+                <div class="item">
+                    <span class="num">3 → 300+</span>
+                    <span class="lbl">Customers</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ====== NUMBERS DEEP ====== -->
+<section class="numbers">
+    <div class="container">
+        <span class="eyebrow eyebrow-line">A track record, not a pitch deck</span>
+        <h2>The numbers from <em>building one</em> Customer Success function from scratch and scaling it through acquisition by a Fortune 15 healthcare company.</h2>
+
+        <div class="metrics-grid">
+            <div class="metric">
+                <div class="metric-num">135<span class="accent">%</span></div>
+                <div class="metric-lbl">Net Revenue Retention</div>
+                <div class="metric-context">World-class benchmark is 130 percent and above. Driven by a systematic upsell and cross-sell motion.</div>
+            </div>
+            <div class="metric">
+                <div class="metric-num">45<span class="accent">%</span></div>
+                <div class="metric-lbl">Expansion Revenue</div>
+                <div class="metric-context">Share of total annual growth from existing customers, not new logos.</div>
+            </div>
+            <div class="metric">
+                <div class="metric-num">93<span class="accent">%</span></div>
+                <div class="metric-lbl">Gross Revenue Retention</div>
+                <div class="metric-context">Strong benchmark is 90 percent. Maintained through proactive risk management.</div>
+            </div>
+            <div class="metric">
+                <div class="metric-num">NPS 64</div>
+                <div class="metric-lbl">Customer Sentiment</div>
+                <div class="metric-context">Industry benchmark is 30 to 40. Built on relationships, not surveys alone.</div>
+            </div>
+            <div class="metric">
+                <div class="metric-num">0 → 11</div>
+                <div class="metric-lbl">Team Built</div>
+                <div class="metric-context">Five CSMs, four Support, two Implementation. One hundred percent retention through acquisition.</div>
+            </div>
+            <div class="metric">
+                <div class="metric-num">50<span class="accent">%</span></div>
+                <div class="metric-lbl">Roadmap Influence</div>
+                <div class="metric-context">Share of early product decisions informed by Customer Success feedback loops.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== USE CASES ====== -->
+<section class="use-cases" id="services">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow eyebrow-line">Where I plug in</span>
+            <h2>Five situations where <em>fractional CS leadership</em> earns its keep.</h2>
+            <p>Each engagement is scoped to your stage and the specific question you need answered.</p>
+        </div>
+
+        <div class="case-list">
+            <div class="case reveal">
+                <div class="case-num">01</div>
+                <div class="case-trigger">"We're hiring our first CS person and don't know how to scope the role, write the comp plan, or interview for it."</div>
+                <div class="case-response">
+                    <strong>CS Function Build</strong>
+                    Role definition, comp structure, hiring scorecard, onboarding plan, and the operating playbook your first hire needs to succeed. Built from the experience of being employee number six and operating solo for two years before scaling a team.
+                </div>
+            </div>
+
+            <div class="case reveal">
+                <div class="case-num">02</div>
+                <div class="case-trigger">"Renewals are coming up and we have no real visibility into which accounts are at risk."</div>
+                <div class="case-response">
+                    <strong>Churn Risk Assessment and Intervention</strong>
+                    A health scoring framework that combines product usage, support trends, engagement frequency, and relationship strength. Plus a triage motion to recover at-risk accounts before they become losses.
+                </div>
+            </div>
+
+            <div class="case reveal">
+                <div class="case-num">03</div>
+                <div class="case-trigger">"Our CS team exists, but no one can articulate what good looks like or how we drive expansion."</div>
+                <div class="case-response">
+                    <strong>Operating Model and Playbook Design</strong>
+                    Customer segmentation, engagement cadence, QBR structure, expansion triggers, and the metrics that matter at your stage. The systems that allow generalists to become specialists as you scale.
+                </div>
+            </div>
+
+            <div class="case reveal">
+                <div class="case-num">04</div>
+                <div class="case-trigger">"We're heading into diligence and Customer Success is a question mark in the data room."</div>
+                <div class="case-response">
+                    <strong>M&amp;A Readiness and Diligence Prep</strong>
+                    Customer health narrative, retention math, expansion mechanics, and the operating story that lets you defend your Customer Success function in a diligence process. Drawn from leading CS through a Fortune 15 acquisition with one hundred percent staff retention.
+                </div>
+            </div>
+
+            <div class="case reveal">
+                <div class="case-num">05</div>
+                <div class="case-trigger">"We need a strategic Customer Success voice in the room without a six-figure FTE."</div>
+                <div class="case-response">
+                    <strong>Ongoing Fractional Leadership</strong>
+                    A continuous engagement covering executive leadership, hands-on coaching of your team, voice of customer reporting to product, and renewal and expansion oversight. Designed for the company that has outgrown ad hoc and isn't ready for a full-time CS director.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== TRACK RECORD ====== -->
+<section class="track-record" id="about">
+    <div class="container">
+        <div class="tr-grid">
+            <div class="tr-bio">
+                <div class="tr-portrait">
+                    <img src="jesse-bender.png" alt="Jesse Bender, founder of FractionalCS">
+                </div>
+                <span class="eyebrow eyebrow-line">The work behind the work</span>
+                <h2>Thirteen years in <em>healthcare SaaS</em>, doing the actual job before consulting on it.</h2>
+                <div class="tr-byline">Jesse Bender, Founder</div>
+                <p>I joined TelePharm as employee number six, the first and only Customer Success hire. For two years I was a department of one, running every customer relationship while building the systems that would later let us scale.</p>
+                <p>I grew the company from three customers to over three hundred accounts, scaled ARR from $24K to $30M, hit 135 percent Net Revenue Retention, built a team of eleven, and led Customer Success through acquisition by a Fortune 15 healthcare company with one hundred percent staff retention.</p>
+                <p>The frameworks I bring to fractional engagements are not theory. They are the playbooks that made those numbers possible.</p>
+            </div>
+
+            <div class="tr-roles">
+                <div class="role">
+                    <div class="role-title">Director, Customer Success</div>
+                    <div class="role-co">TelePharm (acquired by a Fortune 15 healthcare company)</div>
+                    <div class="role-detail">Built CS from scratch as employee six. Scaled ARR from $24K to $30M, retention to 135 percent NRR, and team to 11. Led the function through M&amp;A diligence and post-acquisition integration.</div>
+                </div>
+
+                <div class="role">
+                    <div class="role-title">Director of Product</div>
+                    <div class="role-co">Outcomes</div>
+                    <div class="role-detail">Hybrid leadership role with both Product and Customer Success reporting in. Owned an $8M P&amp;L, launched a new AI product line generating $1.6M in revenue, and held C-level relationships at Walmart, Walgreens, and other Fortune 500 pharmacy operators.</div>
+                </div>
+
+                <div class="role">
+                    <div class="role-title">Independent CS Consultant</div>
+                    <div class="role-co">FractionalCS</div>
+                    <div class="role-detail">Engagements with B2B SaaS companies on retention strategy, team build-out, and operating model design. Healthcare technology and other regulated industries with complex customer needs.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== IDEAL CLIENT ====== -->
+<section class="ideal-client">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow eyebrow-line">Fit matters</span>
+            <h2>Who this is, and <em>isn't</em>, built for.</h2>
+            <p>I take on a small number of engagements at a time. The work is better when fit is honest from the start.</p>
+        </div>
+
+        <div class="ic-grid">
+            <div class="ic-col yes-col">
+                <h3>This is a fit if you're a <span class="yes">health tech executive</span> who:</h3>
+                <ul>
+                    <li>Leads an early or growth-stage health tech company, post-product-market-fit, scaling toward the next funding milestone.</li>
+                    <li>Has Customer Success as a critical function but isn't ready to commit to a full-time CS director.</li>
+                    <li>Operates in a regulated environment where customer trust, compliance, and clinical accuracy are non-negotiable.</li>
+                    <li>Wants a strategic partner who has done the job, not a coach who has only studied it.</li>
+                    <li>Treats retention and expansion as a board-level conversation, not an afterthought.</li>
+                </ul>
+            </div>
+
+            <div class="ic-col no-col">
+                <h3>This is probably <span class="no">not the right fit</span> if you:</h3>
+                <ul>
+                    <li>Are pre-product-market-fit and still searching for repeatable customer outcomes.</li>
+                    <li>Need a high-volume CSM to handle day-to-day account work rather than strategic leadership.</li>
+                    <li>Want a packaged playbook delivered without a true partnership engagement.</li>
+                    <li>Are looking for the cheapest fractional resource rather than the most relevant one.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== CONTACT ====== -->
+<section class="contact" id="contact">
+    <div class="container-narrow">
+        <span class="eyebrow eyebrow-line">Start a conversation</span>
+        <h2>Tell me what's <em>actually going on</em> with your Customer Success function.</h2>
+        <p class="contact-intro">A short message is all it takes. I read every inquiry personally and reply within one business day. The first conversation is a working call, not a sales pitch.</p>
+
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xjggglaj" method="POST">
+            <div class="form-group">
+                <label for="name">Name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+                <label for="company">Company <span class="req">*</span></label>
+                <input type="text" id="company" name="company" required autocomplete="organization">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message <span class="req">*</span></label>
+                <textarea id="message" name="message" required placeholder="What's your biggest CS challenge right now?"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+            <div class="form-status" id="formStatus"></div>
+        </form>
+    </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+    <div class="container">
+        <div class="footer-inner">
+            <a href="#" class="wordmark">FractionalCS<span style="color: var(--accent);">.</span></a>
+            <div>&copy; <span id="year"></span> FractionalCS. All rights reserved.</div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Nav scroll state
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach((el) => observer.observe(el));
+
+    // Form handling with AJAX so user stays on page
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        status.className = 'form-status';
+        status.textContent = '';
+
+        const formData = new FormData(form);
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { Accept: 'application/json' }
+            });
+            if (response.ok) {
+                status.className = 'form-status success';
+                status.textContent = 'Thank you. Your message is in. I will reply within one business day.';
+                form.reset();
+                submitBtn.textContent = 'Sent';
+            } else {
+                throw new Error('Submission failed');
+            }
+        } catch (err) {
+            status.className = 'form-status error';
+            status.textContent = 'Something went wrong. Please email jesseinic@gmail.com directly.';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+        }
+    });
+</script>
+
+</body>
+</html>
