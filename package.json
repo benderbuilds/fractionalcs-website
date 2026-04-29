@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Fractional CS Leadership website",
   "scripts": {
-    "start": "serve . -l 3000"
+    "start": "serve . -l $PORT"
   },
   "dependencies": {
     "serve": "^14.2.1"
